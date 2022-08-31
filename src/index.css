@@ -39,6 +39,7 @@ h1 {
   padding: 10px;
 }
 .app input {
+  max-width: 80%;
   padding: 10px 15px;
   font-size: 30px;
   border-radius: 25px;
