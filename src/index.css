@@ -6,12 +6,17 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.html {
+  font-size: 62.5%;
+}
 
 p {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem #333;
 }
 h1 {
   font-size: 6rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem #333;
 }
 .app {
   width: 100%;
@@ -40,12 +45,14 @@ h1 {
 }
 .app input {
   max-width: 80%;
-  padding: 10px 15px;
+  padding: 1rem 1.5rem;
   font-size: 30px;
-  border-radius: 25px;
-  border: 1px solid white;
-  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  border: none;
+  /* border: 1px solid white; */
+  background-color: rgba(255, 255, 255, 0.3);
   color: white;
+  text-shadow: 0.2rem 0.2rem 0.2rem #333;
 }
 .app input:hover {
   cursor: text;
@@ -56,19 +63,20 @@ h1 {
 
 .container {
   max-width: 100%;
-  height: 100vh;
+
   margin: auto;
   padding: 0 10px;
   position: relative;
   top: 10%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 4rem;
+  justify-content: space-around;
 }
 .app .top {
-  width: 80%;
-  margin: 20px auto;
-  background-color: rgba(255, 255, 255, 0.2);
+  width: 40%;
+  margin: 2rem auto;
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 12px;
   padding: 20px;
 }
@@ -79,14 +87,16 @@ h1 {
 }
 .app .bottom {
   display: flex;
+  gap: 3rem;
   justify-content: space-evenly;
   text-align: center;
-  width: 100%;
+  width: 60%;
   margin: 1rem auto;
-  padding: 1rem;
+  padding: 3.8rem 2rem;
   border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
 }
+
 .bold {
   font-weight: 700;
 }
@@ -108,4 +118,57 @@ h1 {
   background-repeat: no-repeat;
   max-width: 100%;
   min-height: 100vh;
+}
+.loading {
+  padding: 20px;
+  border: 1px solid white;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Tablem (768px) */
+@media (max-width: 48em) {
+  .app .top {
+    width: 50%;
+  }
+  .app .bottom {
+    width: 65%;
+  }
+}
+
+@media (max-width: 42em) {
+  html {
+    font-size: 56.2%;
+  }
+  .app .top {
+    width: 70%;
+    font-size: 1.8rem;
+  }
+  .app .bottom {
+    width: 70%;
+  }
+}
+/* Mobile L (425px) */
+@media (max-width: 26.7em) {
+  .app input {
+    font-size: 2rem;
+  }
+  .app .bottom {
+    width: 80%;
+    /* padding: 3.8rem 0rem; */
+  }
+}
+
+/* Mobile S (320px)  */
+@media (max-width: 20em) {
+  .app .top {
+    width: 80%;
+  }
+  .app .bottom {
+    width: 80%;
+    padding: 3.8rem 0.2rem;
+  }
+  .app .bottom:first-child {
+    font-size: 1.4rem;
+  }
 }
